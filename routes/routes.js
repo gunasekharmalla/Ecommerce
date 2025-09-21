@@ -48,7 +48,7 @@ app.post("/login", async (req,res)=>{
             { expiresIn: "1h" }
         )
         res.json({ message: "login success", token: token })
-    } catch(err){ res.json({message: "token error"})
+    } catch(err){ res.json({message: err.message})
     }
     
 })
